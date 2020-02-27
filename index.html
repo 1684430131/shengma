@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圣马</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./assets/Cesium/Cesium.js"></script>
+    <link src="./assets/Cesium/Widgets/widgets.css">
+    <script src="./assets/wvglEnviroment/wvgl.js"></script>
+    <script src="./assets/wvglEnviroment/wvgljs.loaders.js"></script>
+    <script src="https://webapi.amap.com/maps?v=1.4.15&key=663f8f7da1ede77bffa901842a8752e1"></script>
+    <script src="./assets/jquery/index.js"></script>
+    <script src="./assets/layer/layer.js"></script>
+    <link rel="stylesheet" href="./assets/layer/theme/default/layer.css">
+    <script src="https://cdn.bootcss.com/echarts/4.6.0/echarts-en.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/highcharts.js"></script>
+    <script src="https://cdn.highcharts.com.cn/highcharts/highcharts-3d.js"></script>
+    <script src="https://code.highcharts.com.cn/highcharts/modules/cylinder.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- left menu -->
+        <div id="menu">
+            <div id="title">
+                <img src="./assets/img/展开 (1).png" title="收缩" id="TelescopicButton">
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="Dashboard">
+                    <img src="./assets/img/100仪表盘.png" alt="">
+                </div>
+                <div class="menuTitle">Dashboard</div>
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="重大危险源预警检测系统">
+                    <img src="./assets/img/危险.png" alt="">
+                </div>
+                <div class="menuTitle">重大危险源预警检测系统</div>
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="安全风险分区分级系统">
+                    <img src="./assets/img/饼图.png" alt="">
+                </div>
+                <div class="menuTitle">安全风险分区分级系统</div>
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="人员位置管理系统">
+                    <img src="./assets/img/人员.png" alt="">
+                </div>
+                <div class="menuTitle">人员位置管理系统</div>
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="全流程安全生产管理系统">
+                    <img src="./assets/img/收缩.png" alt="">
+                </div>
+                <div class="menuTitle">全流程安全生产管理系统</div>
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="可燃有毒气体检测报警系统">
+                    <img src="./assets/img/可燃气体.png" alt="">
+                </div>
+                <div class="menuTitle">可燃有毒气体检测报警系统</div>
+            </div>
+            <div class="menuItem" style="background: black;">
+                <div class="menuIcon" title="五位一体平台">
+                    <img src="./assets/img/大屏轮巡.png" alt="">
+                </div>
+                <div class="menuTitle">五位一体平台</div>
+            </div>
+            <div class="menuItem">
+                <div class="menuIcon" title="名牛工业云">
+                    <img src="./assets/img/企业.png" alt="">
+                </div>
+                <div class="menuTitle">名牛工业云</div>
+            </div>
+        </div>
+        <!-- right view -->
+        <div id="view">
+            <!-- test View one -->
+            <div id="view1">
+                <!-- cesiumMain -->
+
+                <!-- ceisum ui -->
+                <div id="ceisumUi">
+                    <!-- 头部 -->
+                    <div id="ceisumUiHeader">
+                        <div id="mapTitle">
+                            <input placeholder="搜索地址" type="text" id="words" style="width: 100%;" height="100%">
+                            <div id="resulis">
+                            </div>
+                        </div>
+                        <div id="mapContainer">
+                            <!-- right map selectw content -->
+                            <div id="rightMapSelectContainer">
+                                <div class="rightMapSelect1">
+                                    <div class="rightMapSelectTitle">全国</div>
+                                    <div class="provinceContent">
+                                        <div class="procinceItem">
+                                            <div class="provinceTitle">江苏</div>
+                                            <div class="citieContent">
+                                                <div class="cityItem">
+                                                    <div class="cityItemTitle">无锡</div>
+                                                    <div class="compantContent">
+                                                        <div class="compantItem" id=toWuXiShengMa>无锡圣马气体</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="dateWrap">
+                            <div id="dateTop"></div>
+                            <div id="dateButtom"></div>
+                        </div>
+                        <!-- selecT -->
+                        <div id="selectModel" >地图模式</div>
+                        <div id="cesiumHeaderMain">
+                            <div id="text">圣马气体五位一体平台</div>
+                        </div>
+
+                    </div>
+
+
+                    <!--  -->
+                    <div id="buttom">
+                        <!-- 上部分 -->
+                        <div id="buttomTop">
+                            <div id="buttomTopLeft">
+                                <div class="buttomTopLeftItem">
+                                    <div class="buttomTopLeftItemTitle">卡单总量</div>
+                                    <div class="kadanMesItem" style="margin-top: 40px;">
+                                        <div class="mesHeader">
+                                            <div class="mesHeaderLeft">
+                                                <div class="mesHeaderNo">No.1</div>
+                                                <div class="mesHeaderName">
+                                                    安全生产应知卡</div>
+                                            </div>
+                                            <div class="mesHeaderRightNumber">9</div>
+                                        </div>
+                                        <div class="mesProgress" style="width: 90%;"></div>
+                                        <div class="mesButtom"></div>
+                                    </div>
+                                    <div class="kadanMesItem">
+                                        <div class="mesHeader">
+                                            <div class="mesHeaderLeft">
+                                                <div class="mesHeaderNo">No.2</div>
+                                                <div class="mesHeaderName">危险因素排查辨识清单</div>
+                                            </div>
+                                            <div class="mesHeaderRightNumber">6</div>
+                                        </div>
+                                        <div class="mesProgress" style="width: 60%;"></div>
+                                        <div class="mesButtom"></div>
+                                    </div>
+                                    <div class="kadanMesItem">
+                                        <div class="mesHeader">
+                                            <div class="mesHeaderLeft">
+                                                <div class="mesHeaderNo">No.3</div>
+                                                <div class="mesHeaderName">
+                                                    安全风险分级管控清单</div>
+                                            </div>
+                                            <div class="mesHeaderRightNumber">5</div>
+                                        </div>
+                                        <div class="mesProgress" style="width:50%;"></div>
+                                        <div class="mesButtom"></div>
+                                    </div>
+                                    <div class="kadanMesItem">
+                                        <div class="mesHeader">
+                                            <div class="mesHeaderLeft">
+                                                <div class="mesHeaderNo">No.4</div>
+                                                <div class="mesHeaderName">
+                                                    安全生产承诺卡</div>
+                                            </div>
+                                            <div class="mesHeaderRightNumber">3</div>
+                                        </div>
+                                        <div class="mesProgress" style="width: 30%;"></div>
+                                        <div class="mesButtom"></div>
+                                    </div>
+                                    <div class="kadanMesItem">
+                                        <div class="mesHeader">
+                                            <div class="mesHeaderLeft">
+                                                <div class="mesHeaderNo">No.5</div>
+                                                <div class="mesHeaderName">
+                                                    安全生产应急卡</div>
+                                            </div>
+                                            <div class="mesHeaderRightNumber">1</div>
+                                        </div>
+                                        <div class="mesProgress" style="width: 10%;"></div>
+                                        <div class="mesButtom"></div>
+                                    </div>
+                                </div>
+                                <div class="buttomTopLeftItem">
+                                    <div class="buttomTopLeftItemTitle">事件库</div>
+                                    <div id="shijianContainer">
+                                        <div class="shijianItem" style="background: rgb(31, 31, 31);">
+                                            <div class="shijianItemTitle">充装台氧低报</div>
+                                            <div class="shijianItemValue">DCS</div>
+                                            <div class="shijianItemTime">2020-01-20 15:51:09</div>
+                                        </div>
+                                        <div class="shijianItem" style="background: rgb(65, 64, 64);">
+                                            <div class="shijianItemTitle">储罐区液高报</div>
+                                            <div class="shijianItemValue">DCS</div>
+                                            <div class="shijianItemTime">2020-01-20 15:51:09</div>
+                                        </div>
+                                        <div class="shijianItem" style="background: rgb(31, 31, 31);">
+                                            <div class="shijianItemTitle">储罐区液低报</div>
+                                            <div class="shijianItemValue">DCS</div>
+                                            <div class="shijianItemTime">2020-01-20 15:51:09</div>
+                                        </div>
+                                        <div class="shijianItem" style="background: rgb(65, 64, 64);">
+                                            <div class="shijianItemTitle">多元气高报</div>
+                                            <div class="shijianItemValue">DCS</div>
+                                            <div class="shijianItemTime">2020-01-20 15:51:09</div>
+                                        </div>
+                                        <div class="shijianItem" style="background: rgb(31, 31, 31);">
+                                            <div class="shijianItemTitle">多元气低报</div>
+                                            <div class="shijianItemValue">DCS</div>
+                                            <div class="shijianItemTime">2020-01-20 15:51:09</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="cesiumCanvas1"></div>
+                            <div id="buttomTopRight">
+                                <div class="buttomTopRightItem">
+                                    <div class="buttomTopLeftItemTitle">在职岗位</div>
+                                    <div class="buttomTopRightICanvasWrap">
+                                        <div class="bingtuCanvas" id="piechart1"></div>
+                                        <div class="bingtuCanvas" id="piechart2"></div>
+                                    </div>
+                                </div>
+                                <div class="buttomTopRightItem">
+                                    <div class="buttomTopLeftItemTitle">安全分区比重</div>
+                                    <div class="buttomTopRightICanvasWrap">
+                                        <div class="tdPie" id="3dp1"></div>
+                                        <div class="tdPie" id="3dp2"></div>
+                                    </div>
+                                </div>
+                                <div class="buttomTopRightItem">
+                                    <div class="buttomTopLeftItemTitle">报警统计</div>
+                                    <div class="zhuzhuang3d" id="zhuzhuang3d"></div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <!-- 下部分 -->
+                        <div id="buttomButtom">
+                            <div class="buttomCanvasItem">
+                                <div class="canvasCenter">
+                                    <div class="canvasTitle">发生器</div>
+                                    <div class="canvasContainer1">
+                                        <div class="canvasContainer1Item">
+                                            <div class="canvasContainerItemPig">
+                                                <div class="canvasContainerPigMain">
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">出水温度</div>
+                                                        <div class="canvasPigItemBottom">-50℃</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">水温</div>
+                                                        <div class="canvasPigItemBottom">-178℃</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">复出口压力</div>
+                                                        <div class="canvasPigItemBottom">-3.7KPa</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">主出口压力</div>
+                                                        <div class="canvasPigItemBottom">-7.5KPa</div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <canvas id="buttomCanvas1" class="canvasContainerItemCanvas"></canvas>
+                                        </div>
+                                        <div class="canvasContainer1Item">
+                                            <div class="canvasContainerItemPig">
+                                                <div class="canvasContainerPigMain">
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">出水温度</div>
+                                                        <div class="canvasPigItemBottom">-27℃</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">水温</div>
+                                                        <div class="canvasPigItemBottom">-17℃</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">复出口压力</div>
+                                                        <div class="canvasPigItemBottom">-1KPa</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">主出口压力</div>
+                                                        <div class="canvasPigItemBottom">-2.1KPa</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <canvas id="buttomCanvas2" class="canvasContainerItemCanvas"></canvas>
+                                        </div>
+                                        <div class="canvasContainer1Item">
+                                            <div class="canvasContainerItemPig">
+                                                <div class="canvasContainerPigMain">
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">出水温度</div>
+                                                        <div class="canvasPigItemBottom">-37℃</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">水温</div>
+                                                        <div class="canvasPigItemBottom">-22℃</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">复出口压力</div>
+                                                        <div class="canvasPigItemBottom">-12KPa</div>
+                                                    </div>
+                                                    <div class="canvaPigItem">
+                                                        <div class="canvasPigItemTop">主出口压力</div>
+                                                        <div class="canvasPigItemBottom">-8KPa</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <canvas id="buttomCanvas3" class="canvasContainerItemCanvas"></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttomCanvasItem">
+                                <div class="canvasCenter">
+                                    <div class="canvasTitle">电石库</div>
+                                    <div class="canvasCenterMainContainer">
+                                        <div class="centerCanvasContent">
+                                            <div class="canvaPigItem1" >
+                                                <div class="canvasPigItemTop">仓库1温度</div>
+                                                <div class="canvasPigItemBottom">6.25摄氏度</div>
+                                            </div>
+                                            <div class="canvaPigItem1" >
+                                                <div class="canvasPigItemTop">仓库1湿度</div>
+                                                <div class="canvasPigItemBottom">60%</div>
+                                            </div>
+                                        </div>
+                                        <canvas class="centerCanvas" id="buttomCanvas4"></canvas>
+                                        <div class="centerCanvasContent">
+                                            <div class="canvaPigItem1" >
+                                                <div class="canvasPigItemTop">仓库2温度</div>
+                                                <div class="canvasPigItemBottom">6.15℃</div>
+                                            </div>
+                                            <div class="canvaPigItem1" >
+                                                <div class="canvasPigItemTop">仓库2湿度</div>
+                                                <div class="canvasPigItemBottom">64%</div>
+                                            </div>
+                                        </div>
+                                        <canvas class=centerCanvas id="buttomCanvas5"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="buttomCanvasItem">
+                                <div class="canvasCenter">
+                                    <div class="canvasTitle">压缩机组</div>
+                                    <div class="canvasLast">
+                                        <div id="canvasLastWrap">
+                                            <canvas class="canvasLasetWrapCanvas" id="buttomCanvas6"></canvas>
+                                            <canvas class="canvasLasetWrapCanvas" id="buttomCanvas7"></canvas>
+                                        </div>
+                                        <div id="canvasWrapContent">
+                                            <div class="canvasLasetContentWrap">
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">进气气压</div>
+                                                    <div class="mesTitle">-250Pa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">油压</div>
+                                                    <div class="mesTitle">-0.15MPa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">末级压力</div>
+                                                    <div class="mesTitle">-1MPa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">排气温度</div>
+                                                    <div class="mesTitle">-250°C</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem" style="margin-top: 5px;">
+                                                    <div class="mesTitle">末级压力</div>
+                                                    <div class="mesTitle">-250MPa</div></div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">油压</div>
+                                                    <div class="mesTitle">-0.25MPa</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">进气气压</div>
+                                                    <div class="mesTitle">-1Pa</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">排气温度</div>
+                                                    <div class="mesTitle">-250°C</div>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="canvasLasetContentWrap">
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">进气气压</div>
+                                                    <div class="mesTitle">-250Pa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">油压</div>
+                                                    <div class="mesTitle">-0.15MPa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">末级压力</div>
+                                                    <div class="mesTitle">-1MPa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">排气温度</div>
+                                                    <div class="mesTitle">-250°C</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem" style="margin-top: 5px;">
+                                                    <div class="mesTitle">末级压力</div>
+                                                    <div class="mesTitle">-250MPa</div></div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">油压</div>
+                                                    <div class="mesTitle">-0.25MPa</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">进气气压</div>
+                                                    <div class="mesTitle">-1Pa</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">排气温度</div>
+                                                    <div class="mesTitle">-250°C</div>
+                                                </div>
+                                            </div>
+                                            <div class="canvasLasetContentWrap">
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">进气气压</div>
+                                                    <div class="mesTitle">-250Pa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">油压</div>
+                                                    <div class="mesTitle">-0.15MPa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">末级压力</div>
+                                                    <div class="mesTitle">-1MPa</div>
+                                                </div>
+                                                <div class="mesItem1 mesItem">
+                                                    <div class="mesTitle">排气温度</div>
+                                                    <div class="mesTitle">-250°C</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem" style="margin-top: 5px;">
+                                                    <div class="mesTitle">末级压力</div>
+                                                    <div class="mesTitle">-250MPa</div></div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">油压</div>
+                                                    <div class="mesTitle">-0.25MPa</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">进气气压</div>
+                                                    <div class="mesTitle">-1Pa</div>
+                                                </div>
+                                                <div class="mesItem2 mesItem">
+                                                    <div class="mesTitle">排气温度</div>
+                                                    <div class="mesTitle">-250°C</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- left machine -->
+                        <div id="seemacine">查看设备</div>
+                        <div id="leftMacine" style="display: none;">
+                            <div id="leftMacineCloseButton">隐藏</div>
+                            <div class="leftMacineItem">
+                                <div class="leftMacineTitle">发生器</div>
+                                <div class="fullScreenToCancas"></div>
+                                <div class="canvasWrap">
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full1" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas1"></canvas>
+                                    </div>
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full2" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas2"></canvas>
+                                    </div>
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full3" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas3"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leftMacineItem">
+                                <div class="leftMacineTitle">电石库</div>
+                                <div class="canvasWrap">
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full4" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas4" width="250px"></canvas>
+                                    </div>
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full5" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas5" width="250px"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="leftMacineItem">
+                                <div class="leftMacineTitle">压缩机</div>
+                                <div class="canvasWrap">
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full6" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas6" width="250px"></canvas>
+                                    </div>
+                                    <div class="canvasItem">
+                                        <div class="fullScreenToCancas">
+                                            <img id="full7" src="./assets/img/信息.png" alt="">
+                                        </div>
+                                        <canvas id="canvas7" width="250px"></canvas>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- cesium menu -->
+                <div id="cesiumMenu">
+                    <div id="ceisumMenuMain" style="display: none;">
+                        <div class="cesiumMenuItem">
+                            <div class="ceisumMenuItemContent">
+                                <div class="ceisumMenuItemContentItem">卫星轨道</div>
+                                <div class="ceisumMenuItemContentItem">卫星成像</div>
+                                <div class="ceisumMenuItemContentItem">卫星编队</div>
+                            </div>
+                            <div class="ceisumLine"></div>
+                            <div class="ceisuMenuItemImg">
+                                <img src="http://wwww.wvgl.com/pgis/img/icon/wx.png" alt="">
+                            </div>
+                            <div class="ceisumMenuItemTitile">
+                                IPSON
+                            </div>
+                        </div>
+                        <div class="cesiumMenuItem">
+                            <div class="ceisumMenuItemContent">
+                                <div class="ceisumMenuItemContentItem">全球降雨量</div>
+                                <div class="ceisumMenuItemContentItem">全球降雨量</div>
+                                <div class="ceisumMenuItemContentItem">风向</div>
+                                <div class="ceisumMenuItemContentItem">全球矢量</div>
+                                <div class="ceisumMenuItemContentItem">全球GDP</div>
+                                <div class="ceisumMenuItemContentItem">流向图</div>
+                                <div class="ceisumMenuItemContentItem">公交拥挤图</div>
+                            </div>
+                            <div class="ceisumLine"></div>
+                            <div class="ceisuMenuItemImg">
+                                <img src="http://wwww.wvgl.com/pgis/img/icon/chart.png" alt="">
+                            </div>
+                            <div class="ceisumMenuItemTitile">气体报警控制器1</div>
+                        </div>
+                        <div class="cesiumMenuItem">
+                            <div class="ceisumMenuItemContent">
+                                <div class="ceisumMenuItemContentItem">倾斜摄影</div>
+                                <div class="ceisumMenuItemContentItem">视频监控</div>
+                                <div class="ceisumMenuItemContentItem">倾斜摄影单体化</div>
+                                <div class="ceisumMenuItemContentItem">3dMax模型</div>
+                                <div class="ceisumMenuItemContentItem">Bim模型</div>
+                                <div class="ceisumMenuItemContentItem">模型内部</div>
+                                <div class="ceisumMenuItemContentItem">点云</div>
+                            </div>
+                            <div class="ceisumLine"></div>
+                            <div class="ceisuMenuItemImg">
+                                <img src="http://wwww.wvgl.com/pgis/img/icon/BIM2.png" alt="">
+                            </div>
+                            <div class="ceisumMenuItemTitile">气体报警控制器2</div>
+                        </div>
+                        <div class="cesiumMenuItem">
+                            <div class="ceisumMenuItemContent">
+                                <div class="ceisumMenuItemContentItem">太阳光照</div>
+                                <div class="ceisumMenuItemContentItem">阴影</div>
+                                <div class="ceisumMenuItemContentItem">河流</div>
+                                <div class="ceisumMenuItemContentItem">雨</div>
+                                <div class="ceisumMenuItemContentItem">雪</div>
+                            </div>
+                            <div class="ceisumLine"></div>
+                            <div class="ceisuMenuItemImg">
+                                <img src="http://wwww.wvgl.com/pgis/img/icon/dianyun.png" alt="">
+                            </div>
+                            <div class="ceisumMenuItemTitile">门禁管理</div>
+                        </div>
+                        <div class="cesiumMenuItem">
+                            <div class="ceisumMenuItemContent">
+                                <div class="ceisumMenuItemContentItem">智慧园区</div>
+                                <div class="ceisumMenuItemContentItem">地铁站</div>
+                            </div>
+                            <div class="ceisumLine"></div>
+                            <div class="ceisuMenuItemImg">
+                                <img src="http://wwww.wvgl.com/pgis/img/icon/anli.png" alt="">
+                            </div>
+                            <div class="ceisumMenuItemTitile">视频监控</div>
+                        </div>
+                        <div class="cesiumMenuItem">
+                            <div class="ceisumMenuItemContent">
+                                <div class="ceisumMenuItemContentItem">图层</div>
+                            </div>
+                            <div class="ceisumLine"></div>
+                            <div class="ceisuMenuItemImg">
+                                <img src="http://wwww.wvgl.com/pgis/img/icon/tuceng.png" alt="">
+                            </div>
+                            <div class="ceisumMenuItemTitile">在岗职位</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 七个容器 -->
+    <div class="bot1" id="bot1">
+        <canvas id="botcanvas1" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen1" alt=""></div>
+    </div>
+    <div class="bot1" id="bot2">
+        <canvas id="botcanvas2" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen2" alt=""></div>
+    </div>
+    <div class="bot1" id="bot3">
+        <canvas id="botcanvas3" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen3" alt=""></div>
+    </div>
+    <div class="bot1" id="bot4">
+        <canvas id="botcanvas4" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen4" alt=""></div>
+    </div>
+    <div class="bot1" id="bot5">
+        <canvas id="botcanvas5" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen5" alt=""></div>
+    </div>
+    <div class="bot1" id="bot6">
+        <canvas id="botcanvas6" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen6" alt=""></div>
+    </div>
+    <div class="bot1" id="bot7">
+        <canvas id="botcanvas7" width="100vw" height="100vh"></canvas>
+        <div><img src="./assets/img/退出全屏.png" id="exitfullsceen7" alt=""></div>
+    </div>
+</body>
+<script src="./js/main.js"></script>
+<script src="./js/ui.js"></script>
+<script src="./js/log.js"></script>
+
+</html>

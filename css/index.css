@@ -1,0 +1,891 @@
+/* 
+ the css for page 
+ it was the single style css for the index page
+*/
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#app{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+}
+#menu{
+    width: 60px;
+    transition: 0.5s all;
+    height: 100vh;
+    overflow: hidden;
+    background: rgb(42, 43, 42);
+    flex-shrink: 0;
+    position: relative;
+}
+#view{
+    flex-grow: 1;
+    width: 100%;
+    position: relative;
+    height: 100vh;
+}
+.menuItem{
+    width: 240px;
+    height: 60px;
+    display: flex;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.menuItem:hover{
+    background: rgb(34, 34, 34);
+}
+#title{
+    width: 100%;
+    height: 50px;
+}
+#TelescopicButton{
+    width: 30px;
+    position: absolute;
+    right: 15px;
+    top:10px;
+    cursor: pointer;
+}
+.menuIcon{
+    width: 60px;
+    height: 60px;
+}
+.menuIcon img{
+    width: 25px;
+    margin-top: 17.5px;
+    margin-left: 15px;
+}
+.menuTitle{
+    transition: 0.5s all;
+    width: 180px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 14px;
+    color: rgb(211, 208, 208);
+}
+.menuItem:hover .menuTitle{
+    color: white;
+}
+#view1{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    position: relative;
+}
+
+#ceiusmCanvas{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    flex-grow: 1;
+    left:0;
+    z-index: 1;
+}
+#ceiusmCanvas canvas{
+    width: 100%!important;
+    height: 100vh!important;
+}
+#cesiumCanvas1 canvas{
+    width: 100%!important;
+    height: 100%!important;
+    transition: 1s all;
+}
+.cesium-widget{
+    width: 100%!important;
+    height: 100%!important;
+}
+.cesium-viewer-selectionIndicatorContainer{
+    display: none;
+}
+.cesium-viewer-infoBoxContainer{
+    display: none;
+}
+.cesium-viewer{
+    width: 100%;
+    height: 100%;
+}
+.cesium-viewer-cesiumWidgetContainer{
+    width: 100%;
+    height: 100%;
+}
+#cesiumMenu{
+    width: 100vw;
+    position: absolute;
+    bottom:40px;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+#ceisumMenuMain{
+    display: flex;
+    color: white;
+    position: relative;
+    
+}
+.cesiumMenuItem{
+    width: 120px;
+    font-size: 14px;
+    height: 90px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: 0.5s all;
+    position: relative;
+}
+.ceisuMenuItemImg img{
+    width: 60px;
+    margin-left: 30px;
+}
+.ceisumMenuItemTitile{
+    width: 100%;
+    text-align: center;
+}
+.cesiumMenuItem:hover{
+    transform: scale(1.3);
+}
+.ceisumMenuItemContent{
+    width: 120px;
+    position: absolute;
+    bottom:100%;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    display: none;
+    border: 1px solid #29486D;
+    background-color: rgba(255,255,255,.1)
+}
+.cesiumMenuItem:hover .ceisumMenuItemContent{
+    display: block;
+}
+.ceisumLine{
+    position: absolute;
+    top:-10px;
+    height: 10px;
+    left:0;
+    width: 100%;
+}
+.ceisumMenuItemContentItem{
+    width: 100%;
+    text-align: center;
+    height: 30px;
+    transition: 0.5s all;
+    line-height: 30px;
+    font-size: 14px;
+}
+.ceisumMenuItemContentItem:hover{
+    background: black;
+}
+#ceisumUi{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    left:0;
+    flex-grow: 1;
+    top:0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+}
+#ceisumUiHeader{
+    width: 100%;
+    height: 10%;
+    flex-shrink: 0;
+    z-index: 2;
+    display: flex;
+    position: relative;
+    background: rgb(36, 36, 36);
+}
+#buttom{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+
+
+
+#cesiumHeaderMain{
+    width: 20%;
+    margin-left: 40%;
+    color: white;
+    font-size: 20px;
+    position: relative;
+
+}
+#cesiumHeaderMain img{
+    width: 80%;
+    margin-left: 10%;
+}
+#text{
+    width: 100%;
+    position: absolute;
+    top:0;
+    height: 100px;
+    left:0;
+    text-align: center;
+    line-height: 100px;
+    font-size: 25px;
+    font-weight: bold;
+}
+#leftMacine{
+    width: 500px;
+    position: absolute;
+    left:20px;
+    top:0;
+    z-index: 2;
+}
+.leftMacineItem{
+    width: 500px;
+    height: 250px;
+    margin-top: 10px;
+    border-radius: 10px;
+    border: 1px solid #ff6700;
+    position: relative;
+    background: rgba(26, 26, 26, 0.7);
+}
+.leftMacineTitle{
+    position: absolute;
+    left:10px;
+    top:10px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.canvasWrap{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:0;
+    top:0;
+    display: flex;
+}
+.canvasItem{
+    position: relative;
+}
+
+#canvas1{
+    width: 166px;
+    box-sizing: border-box;
+    border-right: 1px solid #ff6700;
+    outline: none;
+    height: 100%;
+}
+#canvas2{
+    width: 166px;
+    box-sizing: border-box;
+    border-right: 1px solid #ff6700;
+    outline: none;
+    height: 100%;
+    border-right: 1px solid #ff6700;
+}
+#canvas3{
+    width: 166px;
+    height: 100%;
+    outline: none;
+    order-right: 1px solid #ff6700;
+}
+#canvas4{
+    box-sizing: border-box;
+    border-right: 1px solid #ff6700;
+    outline: none;
+    width: 250px;
+    height: 100%;
+}
+#canvas5{
+    width: 250px;
+    outline: none;
+    height: 100%;
+    border-right: 1px solid #ff6700;
+}
+#canvas6{
+    box-sizing: border-box;
+    border-right: 1px solid #ff6700; 
+    outline: none;
+    width: 250px;
+    height: 100%;
+}
+#canvas7{
+    width: 250px;
+    outline: none;
+    border-right: 1px solid #ff6700;
+    height: 100%;
+}
+.fullScreenToCancas{
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 10px;
+    top:10px;
+
+}
+.fullScreenToCancas img{
+    width: 100%;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.fullScreenToCancas img:hover{
+    transform: scale(1.2);
+}
+
+.full{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left:0;
+}
+
+
+.bot1{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 99;
+    display:none ;
+}
+.bot1 canvas{
+    position: absolute;
+    left:0;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+}
+.bot1>div{
+    position: absolute;
+    right:20px;
+    top:20px;
+}
+.bot1>div img{
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+#right{
+    height: 100%;
+    position: absolute;
+    right: 20px;
+    top:0;
+    z-index: 11;
+}
+#mapTitle{
+    width: 250px;
+    height: 35px;
+    text-align: center;
+    background: rgba(0, 0, 0,0.1);
+    color: rgb(231, 231, 231);
+    margin-top: 20px;
+    line-height: 35px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    tOP:-10px;
+    z-index: 10;
+    border-radius: 10px;
+}
+#mapTitle input{
+    width: 100%;
+    outline: none;
+    border: none;
+    color:#999;
+    text-indent: 10px;
+    background: rgba(83, 83, 83, 0.9);
+    font-size: 14px;
+    height: 100%;
+}
+.rightMapSelect1{
+    width: 100px;
+    height: 35px;
+    background: rgba(26, 26, 26, 0.7);
+    margin-top: 20px;
+    text-align: center;
+    line-height:35px;
+    outline: 1px solid rgb(71, 71, 71);
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top:40px;
+    right: 20px;
+    transition: 0.5s all;
+}
+.rightMapSelect1:hover{
+    color: #ff6700;
+}
+.rightMapSelect1:hover .provinceContent{
+    display: block;
+}
+.procinceItem{
+    width: 100px;
+    height: 35px;
+    background: rgba(26, 26, 26, 0.7);
+    text-align: center;
+    line-height:35px;
+    outline: 1px solid rgb(71, 71, 71);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s all;
+    position: relative;
+}
+.procinceItem:hover{
+    color: #ff6700;
+}
+.provinceContent{
+    position: absolute;
+    left:-100px;
+    top: 0;
+    display: none;
+}
+.citieContent{
+    position: absolute;
+    left:-100px;
+    top: 0;
+    display: none;
+}
+.cityItem{
+    width: 100px;
+    height: 35px;
+    background: rgba(26, 26, 26, 0.7);
+    text-align: center;
+    line-height:35px;
+    outline: 1px solid rgb(71, 71, 71);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s all;
+    position: relative;
+}
+.cityItem:hover{
+    color: #ff6700;
+}
+.procinceItem:hover .citieContent{
+    display: block;
+}
+.cityItem:hover .compantContent{
+    display: block;
+}
+.compantContent{
+    position: absolute;
+    top:0;
+    left:-200px;
+    display: none;
+}
+.compantItem{
+    width: 200px;
+    height: 35px;
+    background: rgba(26, 26, 26, 0.7);
+    text-indent: 20px;
+    line-height:35px;
+    outline: 1px solid rgb(71, 71, 71);
+    color: white;
+    cursor: pointer;
+    transition: 0.5s all;
+}
+.compantItem:hover{
+    color: #ff6700;
+}
+#leftMacineCloseButton{
+    position: absolute;
+    left:101%;
+    width: 100px;
+    height: 40px;
+    background: rgba(77, 76, 76, 0.5);
+    top:10px;
+    border: 1px solid #ff6700;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#seemacine{
+    position: absolute;
+    left:15px;
+    top:5px;
+    width: 100px;
+    display: grid;
+    height: 40px;
+    background: rgba(77, 76, 76, 0.5);
+    top:10px;
+    border: 1px solid #ff6700;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+    top:-60px;
+}
+
+.cesium-viewer-toolbar{
+    display: none!important;
+
+}
+#resulis{
+    width: 100%;
+    
+}
+#resulis .resuliItem{
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    text-indent: 20px;
+    border-bottom: 1px solid rgb(216, 216, 216);
+    background: rgba(243, 243, 243);
+    color:#999;
+    text-align: left;
+}
+#buttomTop{
+    flex-grow: 1;
+    width: 100%;
+    height: 100%;
+    background: #16100b;
+    display: flex;
+}
+#buttomTopLeft{
+    width: 26%;
+    height: 100%;
+    flex-shrink: 0;
+}
+#cesiumCanvas1{
+    flex-grow: 1;
+    width: 100%;
+    transition: 0.4s all;
+    height: 100%;
+    background: rgb(255, 255, 255);
+}
+#buttomTopRight{
+    width: 26%;
+    height: 100%;
+    flex-shrink: 0;
+}
+#buttomButtom{
+    width: 100%;
+    height: 33%;
+    background: #16100b;
+    flex-shrink: 0;
+    display: flex;
+}
+.buttomCanvasItem{
+    width: 33.3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.canvasCenter{
+    width: 95%;
+    height: 90%;
+    background: rgb(0, 0, 0,0.5);
+
+    position: relative;
+    border-radius: 5px;
+}
+.canvasTitle{
+    position: absolute;
+    text-align: center;
+    left:10px;
+    top:5px;
+    color: white;
+    font-size: 14px;
+    font-family:"Times New Roman",Georgia,Serif;
+}
+*{
+    font-family:"微软雅黑";
+}
+#dateWrap{
+    width: 300px;
+    height: 100px;
+    position: absolute;
+    top:0;
+    left:40px;
+}
+#dateTop{
+    width: 100%;
+    height: 40%;
+    margin-top: 5%;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 20px;
+}
+#dateButtom{
+    width: 100%;
+    height: 40%;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+.buttomTopLeftItem{
+    width: 95%;
+    margin-left: 2.5%;
+    height: 49%;
+    margin-bottom: 1%;
+    position: relative;
+    background: rgb(0, 0, 0,0.5);
+    overflow: hidden;
+}
+.buttomTopLeftItemTitle{
+    position: absolute;
+    left:10px;
+    z-index: 1111;
+    top:4px;
+    color: rgb(224, 224, 224);
+    font-size: 16px;
+}
+.buttomTopLeftItem:nth-child(1){
+    margin-top: 2%;
+}
+.buttomTopRightItem{
+    width: 95%;
+    overflow: hidden;
+    height: 32%;
+    margin-left: 1.5%;
+    margin-bottom: 2%;
+    position: relative;
+    background: rgb(0, 0, 0,0.5);
+}
+.buttomTopRightItem:nth-child(1){
+    margin-top: 2%;
+}
+.kadanMesItem{
+    width: 92%;
+    margin-left: 4%;
+    margin-top: 20px;
+}
+.kadanMesItem:nth-child(1){
+    margin-top: 0px;
+}
+.mesHeader{
+    width: 100%;
+    display: flex;
+    height: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.mesHeaderLeft{
+    display: flex;
+}
+.mesHeaderNo{
+    color: #ff850a;
+    font-size: 14px;
+    
+}
+.mesHeaderName{
+    color: #e0e0e0;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.mesHeaderRightNumber{
+    color: white;
+    font-size: 14px;
+}
+.mesProgress{
+    height:5px;
+    width: 100%;
+    background: #474747;
+    margin-top: 5px;
+}
+.mesButtom{
+    height:1px;
+    width: 100%;
+    background: #ff6600;
+    opacity: 0.5;
+    margin-top: 2px;
+}
+#shijianContainer{
+    width: 92%;
+    height: 80%;
+    margin-top: 9%;
+    margin-left: 4%;
+}
+.shijianItem{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    color: white;
+    align-items: center;
+}
+.shijianItemTitle{
+    font-size: 15px;
+    width: 30%;
+    text-indent: 10px;
+}
+.shijianItemValue{
+  font-size: 15px;
+    width: 10%;
+    text-align: center;
+}
+
+.shijianItemTime{
+    font-size: 15px;
+    width: 60%;
+    text-indent: 20px;
+}
+.buttomTopRightICanvasWrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.bingtuCanvas{
+    width:50%;
+    height:100%;
+}
+.tdPie{
+    width:50%;
+    height:100%;
+}
+.zhuzhuang3d{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    left:0;
+    top:10%;
+}
+.canvasContainer1{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top:5%;
+    display: flex;
+}
+.canvasContainer1Item{
+    width: 33.33%;
+    height: 100%;
+    display: flex;
+}
+.canvasContainerItemPig{
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+.canvasContainerItemCanvas{
+    width: 50%;
+    height: 100%;
+    outline: none;
+}
+.canvasContainerPigMain{
+    width: 80%;
+    height: 80%;
+    position: absolute;
+    top:20%;
+}
+.canvaPigItem{
+    width: 100%;
+    height: 20%;
+    margin-top: 10%;
+    border: 1px solid rgb(248, 90, 27);
+}
+.canvasPigItemTop{
+    width: 100%;
+    height: 50%;
+    font-size: 13px;
+    text-align: center;
+
+    color: white;
+}
+.canvasPigItemBottom{
+    width: 100%;
+text-align: center;
+    font-size: 13px;
+    color: white;
+    height: 50%;
+}
+.canvasCenterMainContainer{
+    width: 100%;
+    display: flex;
+    height: 100%;
+}
+.centerCanvas{
+    width: 25%;
+    height: 100%;
+    outline: none;
+}
+.centerCanvasContent{
+    margin-top: 80px;
+    width: 25%;
+}
+.canvaPigItem1{
+    width: 90%;
+    border: 1px solid #ff6600;
+    height: 50px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+}
+.canvasLast{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    
+}
+#canvasLastWrap{
+    width: 35%;
+    height: 100%;
+}
+
+#canvasWrapContent{
+    width: 62%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.canvasLasetWrapCanvas{
+    width: 100%;
+    height: 50%;
+    outline: none;
+}
+.canvasLasetContentWrap{
+    width: 31%;
+    height: 100%;
+    position: relative;
+}
+.mesItem{
+    width: 100%;
+    height: 12%;
+}
+.mesItem1{
+    border: 1px solid #29486D;
+}
+.mesItem2{
+border: 1px solid rgb(240, 85, 13);
+}
+.mesTitle{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size: 12px;
+}
+#selectModel{
+    width: 120px;
+    height:50px;
+    border-radius: 10px;
+    position: absolute;
+    left:240px;
+    color: #b4b4b4;
+    border: 1px solid #b4b4b4;
+    top:40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

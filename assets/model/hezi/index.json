@@ -1,0 +1,23 @@
+{
+  "sourceFile": "D:\\work\\099330C5645744B7B93C4C6EF71919AF_4_转换中\\max\\1800011.max",
+  "gltfFiles": [
+    "default.gltf"
+  ],
+  "texFiles": {
+    "CD253675501C981FDB5121928A9D75A6": "CD253675501C981FDB5121928A9D75A6.bin",
+    "1356598816B566737D04492566E9A062": "螺旋式冷水机组.jpg"
+  },
+  "size": [
+    5.04209232,
+    1.329323,
+    2.38850641
+  ],
+  "faces": 4077,
+  "verts": 6658,
+  "nodes": 2,
+  "createTime": "2018-08-13 14:31:27",
+  "author": "1854",
+  "computer": "DHJP-20160806JM",
+  "max": "#(18000, 46, 0)",
+  "version": "2.0"
+}

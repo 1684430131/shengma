@@ -1,0 +1,413 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang02.gltf",
+                    "scale": 0.11,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225095956"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.493414,
+                    31.468223,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang09.gltf",
+                    "scale": 0.12,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224172916"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.493863,
+                    31.466867,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang01.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225094833"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.493432,
+                    31.467619,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang03.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225094824"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494054,
+                    31.468021,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang04.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225111651"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494449,
+                    31.468215,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang05.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225095638"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.493663,
+                    31.467127,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang06.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225094910"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.493952,
+                    31.467405,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang07.gltf",
+                    "scale": 0.12,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173146"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494528,
+                    31.46768,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang08.gltf",
+                    "scale": 0.12,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173807"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494248,
+                    31.466911,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang10.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173338"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494196,
+                    31.467191,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang11.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173412"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494674,
+                    31.467556,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang13.gltf",
+                    "scale": 0.12,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173525"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494294,
+                    31.466455,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang15.gltf",
+                    "scale": 0.12,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173714"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494659,
+                    31.466647,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang17.gltf",
+                    "scale": 0.12,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200224173747"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494443,
+                    31.467023,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/lumian.gltf",
+                    "scale": 0.1,
+                    "heading": 50
+                },
+                "attr": {
+                    "id": "20200225095529"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.494082,
+                    31.467865,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/weiqiang.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225093726"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.49409,
+                    31.467866,
+                    0
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "edittype": "model",
+                "name": "模型",
+                "style": {
+                    "modelUrl": "./assets/shengma/changfang14.gltf",
+                    "scale": 0.1,
+                    "heading": 49
+                },
+                "attr": {
+                    "id": "20200225111656"
+                },
+                "type": "model"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    120.495036,
+                    31.467246,
+                    0
+                ]
+            }
+        }
+    ]
+}

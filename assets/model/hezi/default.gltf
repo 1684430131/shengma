@@ -1,0 +1,205 @@
+{
+  "materials": [
+    {
+      "name": "Std_螺旋式冷水机组.jpg",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallicFactor": 0.1,
+        "roughnessFactor": 1
+      },
+      "alphaMode": "OPAQUE"
+    }
+  ],
+  "images": [
+    {
+      "uri": "1356598816B566737D04492566E9A062.jpg"
+    }
+  ],
+  "textures": [
+    {
+      "name": "螺旋式冷水机组.jpg",
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Lo-螺旋式冷水机组_01",
+      "primitives": [
+        {
+          "material": 0,
+          "mode": 4,
+          "indices": 0,
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          }
+        }
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 312396,
+      "uri": "CD253675501C981FDB5121928A9D75A6.bin"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "RootNode",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        1
+      ]
+    },
+    {
+      "name": "body",
+      "translation": [
+        3.0517577442879E-07,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.00999999977648258,
+        0.00999999977648258,
+        0.00999999977648258
+      ],
+      "children": [
+        2
+      ]
+    },
+    {
+      "name": "Lo-螺旋式冷水机组_01",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "mesh": 0
+    }
+  ],
+  "asset": {
+    "generator": "FBX2glTF",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 39948,
+      "byteOffset": 0,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 102168,
+      "byteOffset": 39948,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 102168,
+      "byteOffset": 142116,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 68112,
+      "byteOffset": 244284,
+      "target": 34962
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Root Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 19974,
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 8514,
+      "bufferView": 1,
+      "byteOffset": 0,
+      "min": [
+        -252.104629516602,
+        -66.4661560058594,
+        0.2310791015625
+      ],
+      "max": [
+        252.104629516602,
+        66.4661560058594,
+        239.081726074219
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 8514,
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 8514,
+      "bufferView": 3,
+      "byteOffset": 0
+    }
+  ],
+  "samplers": [
+    {}
+  ]
+}

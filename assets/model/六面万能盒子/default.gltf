@@ -1,0 +1,673 @@
+{
+  "materials": [
+    {
+      "name": "Std_ABB开关柜.jpgTexture_LM.bmp",
+      "occlusionTexture": {
+        "index": 0,
+        "texCoord": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 1,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallicFactor": 0.1,
+        "roughnessFactor": 0.92
+      },
+      "alphaMode": "OPAQUE"
+    },
+    {
+      "name": "Std_ABB开关柜.tga",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallicFactor": 0.1,
+        "roughnessFactor": 1
+      },
+      "alphaMode": "BLEND"
+    },
+    {
+      "name": "Std_配电柜并机t.tga",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 3,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ],
+        "metallicFactor": 0.1,
+        "roughnessFactor": 1
+      },
+      "alphaMode": "BLEND"
+    }
+  ],
+  "images": [
+    {
+      "uri": "528C3713839400BFB2473A069CA46096.jpg"
+    },
+    {
+      "uri": "CD3C90C6FBB1CC935508B42220796569.jpg"
+    },
+    {
+      "uri": "91C2262E0A116931A292FBB567DC3396.png"
+    },
+    {
+      "uri": "277747D652F1BE020F16BA32B8EE118B.png"
+    }
+  ],
+  "textures": [
+    {
+      "name": "Texture_LM.jpg",
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "name": "ABB开关柜.jpg",
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "name": "ABB开关柜.png",
+      "sampler": 0,
+      "source": 2
+    },
+    {
+      "name": "配电柜并机t.png",
+      "sampler": 0,
+      "source": 3
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Lo-BODY_01",
+      "primitives": [
+        {
+          "material": 0,
+          "mode": 4,
+          "indices": 0,
+          "attributes": {
+            "COLOR_0": 3,
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 4,
+            "TEXCOORD_1": 5
+          }
+        }
+      ]
+    },
+    {
+      "name": "Lo-PRINT_01",
+      "primitives": [
+        {
+          "material": 1,
+          "mode": 4,
+          "indices": 6,
+          "attributes": {
+            "NORMAL": 8,
+            "POSITION": 7,
+            "TEXCOORD_0": 9,
+            "TEXCOORD_1": 10
+          }
+        },
+        {
+          "material": 2,
+          "mode": 4,
+          "indices": 11,
+          "attributes": {
+            "NORMAL": 13,
+            "POSITION": 12,
+            "TEXCOORD_0": 14,
+            "TEXCOORD_1": 15
+          }
+        }
+      ]
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 159776,
+      "uri": "A3E3D70F864E4AD9BC3539043790E633.bin"
+    }
+  ],
+  "nodes": [
+    {
+      "name": "RootNode",
+      "translation": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "children": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_06",
+      "translation": [
+        -0.0899585783481598,
+        2.17469477653503,
+        0.0864336937665939
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_02",
+      "translation": [
+        0.0883287340402603,
+        2.17469477653503,
+        -0.0507223904132843
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_10",
+      "translation": [
+        -0.0899585783481598,
+        2.17469477653503,
+        0.223589763045311
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_09",
+      "translation": [
+        0.0883287340402603,
+        2.17469477653503,
+        0.223589763045311
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_08",
+      "translation": [
+        -0.0899585783481598,
+        2.17469477653503,
+        0.155011877417564
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_07",
+      "translation": [
+        0.0883287340402603,
+        2.17469477653503,
+        0.155011877417564
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_01",
+      "translation": [
+        -0.0899585783481598,
+        2.17469477653503,
+        -0.0507223904132843
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_05",
+      "translation": [
+        0.0883287340402603,
+        2.17469477653503,
+        0.0864336937665939
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_04",
+      "translation": [
+        -0.0899585783481598,
+        2.17469477653503,
+        0.0178551860153675
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-电源PORT_03",
+      "translation": [
+        0.0883287340402603,
+        2.17469477653503,
+        0.0178551860153675
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.000322075444273651,
+        0.000542147492524236,
+        0.000542147492524236
+      ]
+    },
+    {
+      "name": "Lo-BODY_01",
+      "translation": [
+        -0.0001687049807515,
+        0.0,
+        0.0
+      ],
+      "rotation": [
+        -0.70710676908493,
+        0.0,
+        0.0,
+        0.70710676908493
+      ],
+      "scale": [
+        0.00999999977648258,
+        0.00999999977648258,
+        0.00999999977648258
+      ],
+      "mesh": 0
+    },
+    {
+      "name": "Lo-PRINT_01",
+      "translation": [
+        -0.000293445598799735,
+        1.12960743904114,
+        -0.0059594726189971
+      ],
+      "rotation": [
+        8.14603424714733E-08,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "scale": [
+        0.00999999977648258,
+        0.00999999977648258,
+        0.00999999977648258
+      ],
+      "mesh": 1
+    }
+  ],
+  "asset": {
+    "generator": "FBX2glTF",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 6924,
+      "byteOffset": 0,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 29280,
+      "byteOffset": 6924,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 29280,
+      "byteOffset": 36204,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 39040,
+      "byteOffset": 65484,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 19520,
+      "byteOffset": 104524,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 19520,
+      "byteOffset": 124044,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 84,
+      "byteOffset": 143564,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 336,
+      "byteOffset": 143648,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 336,
+      "byteOffset": 143984,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 224,
+      "byteOffset": 144320,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 224,
+      "byteOffset": 144544,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 1248,
+      "byteOffset": 144768,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4128,
+      "byteOffset": 146016,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 4128,
+      "byteOffset": 150144,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2752,
+      "byteOffset": 154272,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 2752,
+      "byteOffset": 157024,
+      "target": 34962
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Root Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 3462,
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 2440,
+      "bufferView": 1,
+      "byteOffset": 0,
+      "min": [
+        -29.9221115112305,
+        -61.2585144042969,
+        -0.0422134399414063
+      ],
+      "max": [
+        29.9221115112305,
+        61.1587219238281,
+        219.957794189453
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 2440,
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC4",
+      "count": 2440,
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 2440,
+      "bufferView": 4,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 2440,
+      "bufferView": 5,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 42,
+      "bufferView": 6,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 28,
+      "bufferView": 7,
+      "byteOffset": 0,
+      "min": [
+        -29.6739711761475,
+        -94.1064453125,
+        60.1238632202148
+      ],
+      "max": [
+        29.6739711761475,
+        106.897727966309,
+        60.6625518798828
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 28,
+      "bufferView": 8,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 28,
+      "bufferView": 9,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 28,
+      "bufferView": 10,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 624,
+      "bufferView": 11,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 344,
+      "bufferView": 12,
+      "byteOffset": 0,
+      "min": [
+        -24.39426612854,
+        -106.897735595703,
+        -60.6625518798828
+      ],
+      "max": [
+        24.0465793609619,
+        96.9894638061523,
+        60.6238822937012
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 344,
+      "bufferView": 13,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 344,
+      "bufferView": 14,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 344,
+      "bufferView": 15,
+      "byteOffset": 0
+    }
+  ],
+  "samplers": [
+    {}
+  ]
+}

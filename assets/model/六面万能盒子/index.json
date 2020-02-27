@@ -1,0 +1,26 @@
+{
+  "sourceFile": "D:\\work\\417312464AD74388915BB0286B1028B8_5_转换中\\max\\18000417312464AD74388915BB0286B1028B8.max",
+  "gltfFiles": [
+    "default.gltf"
+  ],
+  "texFiles": {
+    "A3E3D70F864E4AD9BC3539043790E633": "A3E3D70F864E4AD9BC3539043790E633.bin",
+    "528C3713839400BFB2473A069CA46096": "Texture_LM.jpg",
+    "CD3C90C6FBB1CC935508B42220796569": "ABB开关柜.jpg",
+    "91C2262E0A116931A292FBB567DC3396": "ABB开关柜.png",
+    "277747D652F1BE020F16BA32B8EE118B": "配电柜并机t.png"
+  },
+  "size": [
+    0.5984422,
+    1.22517025,
+    2.19999981
+  ],
+  "faces": 953,
+  "verts": 1376,
+  "nodes": 12,
+  "createTime": "2018-08-14 9:38:21",
+  "author": "1854",
+  "computer": "DHJP-20160806JM",
+  "max": "#(18000, 46, 0)",
+  "version": "2.0"
+}
